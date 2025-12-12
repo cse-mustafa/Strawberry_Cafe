@@ -1,0 +1,351 @@
+/* Custom Fonts Imported via HTML Link */
+/* Merriweather for body, Playfair Display for headings */
+
+:root {
+    --primary-color: #ff43a4; /* Vibrant Hot Pink/Magenta */
+    --secondary-color: #F8F4EA; /* Creamy Off-White */
+    --accent-color: #FF80A4; /* Lighter Pink/Red Accent */
+    --text-color: #333;
+    --light-bg: #FFE5F0; /* Very Light Pink Background */
+    --dark-text: #1C0F13; /* Deep dark text */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+/* Cart Icon */
+.cart-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px;
+    transition: transform 0.2s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+#cart-count {
+    background-color: #FFD700; /* Gold/Yellow for contrast */
+    color: var(--dark-text);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.6em;
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: url('./images/Cafe-Desert-Hero.png') center/cover no-repeat; 
+    background-position: center 20%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(255, 67, 164, 0.7); /* Primary color with transparency */
+    padding: 30px 50px;
+    border-radius: 8px;
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+}
+
+/* --- Menu Section & Product Grid --- */
+.menu-section, .about-section, .contact-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+/* Tabs for Categories */
+.category-tabs {
+    margin-bottom: 40px;
+}
+
+.tab-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.tab-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    border: 1px solid var(--accent-color);
+    text-align: left;
+    display: flex; 
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block; 
+}
+
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    padding: 15px 15px 5px;
+    color: var(--primary-color);
+}
+
+.product-card .price {
+    padding: 0 15px 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin-top: auto; 
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center; 
+}
+
+.add-to-cart:hover {
+    background-color: var(--accent-color);
+}
+
+/* Hide products not in the active category */
+.product-card.hidden {
+    display: none;
+}
+
+/* --- Sidebar Cart --- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Hidden state */
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: right 0.4s ease-in-out;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-sidebar h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#cart-items {
+    list-style: none;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--light-bg);
+    font-size: 0.95em;
+}
+
+.cart-footer {
+    margin-top: 20px;
+    border-top: 2px solid var(--accent-color);
+    padding-top: 15px;
+}
+
+.cart-footer p {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: var(--accent-color);
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Overlay for when cart is open */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    display: none;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Small adjustments for better spacing/readability */
+.about-section p, .contact-section p {
+    max-width: 800px;
+    margin: 15px auto;
+}

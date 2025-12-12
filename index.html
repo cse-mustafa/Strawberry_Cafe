@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Strawberry Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>The Strawberry Cafe</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#contact">Visit Us</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Sweet Treats, Every Day.</h2>
+                <p>Handcrafted sweets and strawberry delights, made with passion.</p>
+                <a href="#menu" class="cta-button">View Full Menu</a>
+            </div>
+            </section>
+
+        <section id="menu" class="menu-section container">
+            <h2>Our Selections</h2>
+
+            <div class="category-tabs">
+                <button class="tab-button active" data-category="all">All Items</button>
+                <button class="tab-button" data-category="coffee">Coffee</button>
+                <button class="tab-button" data-category="cake">Cake & Pastries</button>
+                <button class="tab-button" data-category="sodas">Cool Drinks</button>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="coffee">
+                    <img src="./images/Strawberry_Latte.png" alt="Strawberry Latte">
+                    <h3>Strawberry Latte</h3>
+                    <p class="price">$5.50</p>
+                    <button class="add-to-cart" data-name="Strawberry Latte" data-price="5.50">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="coffee">
+                    <img src="./images/Ice_COld_Brew.png" alt="Iced Coffee">
+                    <h3>Iced Cold Brew</h3>
+                    <p class="price">$4.00</p>
+                    <button class="add-to-cart" data-name="Iced Cold Brew" data-price="4.00">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="cake">
+                    <img src="./images/Strawberry_Shortcake.png" alt="Strawberry Shortcake">
+                    <h3>Strawberry Shortcake</h3>
+                    <p class="price">$7.50</p>
+                    <button class="add-to-cart" data-name="Strawberry Shortcake" data-price="7.50">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="cake">
+                    <img src="./images/Rose Macaron Trio.png" alt="Macarons">
+                    <h3>Rose Macaron Trio</h3>
+                    <p class="price">$6.00</p>
+                    <button class="add-to-cart" data-name="Rose Macaron Trio" data-price="6.00">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="sodas">
+                    <img src="./images/Pink_Lemonade.png" alt="Pink Lemonade">
+                    <h3>Sparkling Pink Lemonade</h3>
+                    <p class="price">$4.50</p>
+                    <button class="add-to-cart" data-name="Pink Lemonade" data-price="4.50">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-category="sodas">
+                    <img src="./images/Iced_Tea_Hibiscus.png" alt="Iced Tea">
+                    <h3>Hibiscus Iced Tea</h3>
+                    <p class="price">$4.00</p>
+                    <button class="add-to-cart" data-name="Hibiscus Iced Tea" data-price="4.00">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section container">
+            <h2>Our Story</h2>
+            <p>We started The Strawberry Cafe to share our love for fresh, local strawberries and handcrafted desserts. Every item is a taste of summer, all year round.</p>
+        </section>
+
+        <section id="contact" class="contact-section container">
+            <h2>Visit Us</h2>
+            <p>45 Berry Street, Dessert Town</p>
+            <p>Open daily: 8:00 AM - 7:00 PM</p>
+        </section>
+    </main>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <h3>Your Cart</h3>
+        <ul id="cart-items">
+            </ul>
+        <div class="cart-footer">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+        <button class="close-cart" onclick="toggleCart()">X</button>
+    </aside>
+
+    <div id="overlay" onclick="toggleCart()"></div>
+
+    <footer>
+        <p>&copy; 2025 The Strawberry Cafe. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
